@@ -22,6 +22,7 @@ router.get(
 );
 
 // OAuth logout route
+
 router.get("/logout", function (req, res, next) {
   req.logout(function (err) {
     if (err) {
