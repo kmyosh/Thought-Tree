@@ -45,7 +45,7 @@
     <div class="container">
       <div id="search-row" class="row">
         <h2 class="col s4 blue-grey-text text-darken-2">Students</h2>
-        <form action="/students" method="GET">
+        <form action="/thinkers" method="GET">
           <div class="col s3 offset-s3">
             <!-- search -->
             <div class="input-field">
@@ -79,28 +79,28 @@
         </form>
       </div>
       <div class="row">
-        <div id="students" class="col s12">
-          <% students.forEach(function(student) { %>
+        <div id="thinkers" class="col s12">
+          <% thinkers.forEach(function(thinker) { %>
           <div class="card blue-grey">
             <div class="card-content white-text">
               <div>
                 <span class="card-title">
                   <i class="small material-icons">perm_identity</i>
-                  <span class="student-name"><%= student.name %></span>
-                  <% if (student.cohort) { %><span class="badge white"
-                    >SEI <%= student.cohort %></span
+                  <span class="thinker-name"><%= thinker.name %></span>
+                  <% if (thinker.cohort) { %><span class="badge white"
+                    >SEI <%= thinker.cohort %></span
                   ><% } %>
                 </span>
               </div>
               <ul class="collection">
-                <% student.facts.forEach(function(fact) { %>
+                <% thinker.facts.forEach(function(fact) { %>
                 <li class="collection-item blue-grey-text text-darken-2">
                   <%- fact.text %>
                 </li>
                 <% }) %>
               </ul>
               <!-- Add Dynamic UI form below this line -->
-              <% if (student._id.equals(user && user._id)) { %>
+              <% if (thinker._id.equals(user && user._id)) { %>
               <div class="card-action">
                 <form action="/facts" method="POST">
                   <input type="text" name="text" class="white-text" />
