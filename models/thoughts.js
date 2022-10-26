@@ -13,8 +13,7 @@ const factSchema = new mongoose.Schema(
 
 const thoughtSchema = new mongoose.Schema(
   {
-    timestamps: true,
-    text: String,
+    comments: [{ body: String, date: Date }],
     // facts: [factSchema]
   },
   {
