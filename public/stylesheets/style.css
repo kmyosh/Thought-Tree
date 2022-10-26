@@ -3,6 +3,7 @@ html {
   background-color: white;
   font-family: "Roboto Mono";
 }
+
 .brand-logo {
   margin-left: 15px;
 }
@@ -22,13 +23,11 @@ html {
 .nav-wrapper {
   color: black;
   background-color: white;
+  padding: 25px;
 }
 nav ul a {
   color: black;
 }
 .nav {
   color: black;
-}
-.borderless {
-  box-shadow: none;
 }

@@ -19,6 +19,7 @@ require("./config/passport");
 const indexRoutes = require("./routes/index");
 const thoughtsRoutes = require("./routes/thoughts");
 const thinkersRoutes = require("./routes/thinkers");
+// const newRoutes = require("./")
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
