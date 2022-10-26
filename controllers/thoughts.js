@@ -1,4 +1,4 @@
-const Student = require("../models/student");
+const Thinker = require("../models/thinker");
 
 module.exports = {
   index,
@@ -8,21 +8,21 @@ module.exports = {
 
 function index(req, res, next) {
   console.log(req.query);
-  res.render("thoughts/index", {user: req.user})
-  // Make the query object to use with Student.find based up
+  res.render("thoughts/index", { user: req.user });
+  // Make the query object to use with Thinker.find based up
   // the user has submitted the search form or now
   // let modelQuery = req.query.name
   //   ? { name: new RegExp(req.query.name, "i") }
   //   : {};
   // // Default to sorting by name
   // let sortKey = req.query.sort || "name";
-  // Student.find(modelQuery)
+  // Thinker.find(modelQuery)
   //   .sort(sortKey)
-  //   .exec(function (err, students) {
+  //   .exec(function (err, thinkers) {
   //     if (err) return next(err);
   //     // Passing search values, name & sortKey, for use in the EJS
-  //     res.render("students/index", {
-  //       students,
+  //     res.render("thinkers/index", {
+  //       thinkers,
   //       name: req.query.name,
   //       sortKey,
   //       user: req.user,
@@ -33,7 +33,7 @@ function index(req, res, next) {
 // function addFact(req, res, next) {
 //   req.user.facts.push(req.body);
 //   req.user.save(function (err) {
-//     res.redirect("/students");
+//     res.redirect("/thinkers");
 //   });
 // }
 
