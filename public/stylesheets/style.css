@@ -28,6 +28,8 @@ html {
 nav ul a {
   color: black;
 }
-.nav {
+.title {
   color: black;
+  padding-left: 25px;
+  font-size: 24px;
 }
