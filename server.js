@@ -46,7 +46,6 @@ app.use(passport.session());
 app.use("/", indexRoutes);
 app.use("/thoughts", thoughtsRoutes);
 app.use("/thinkers", thinkersRoutes);
-app.use("/ideas", ideasRoutes);
 
 // invalid request, send 404 page
 app.use(function (req, res) {
