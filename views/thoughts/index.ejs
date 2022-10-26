@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Thought Tree</title>
-    <!-- Google Icon Fonts used by Materialize -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!-- Materialize CSS Framework -->
-    <link rel="stylesheet" href="public/stylesheets/style.css" />
-  </head>
+<%- include('../partials/header.ejs') %>
+<h5>Test</h5>
 
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="" class="nav">Thought Tree</a>
-          <!-- Add login UI here -->
-          <ul class="right">
-            <li>
-              <a href="/ideas">Ideas</a>
-            </li>
-            <li>
-              <% if (user) { %>
-              <a href="/logout"
-                ><i class="material-icons left">trending_flat</i>Log Out</a
-              >
-              <% } else { %>
-              <a href="/auth/google"
-                ><i class="material-icons left">vpn_key</i>Login with Google</a
-              >
-              <% } %>
-            </li>
-          </ul>
-
-      </nav>
-
-  </body>
-</html>
+<%- include('../partials/footer.ejs') %>

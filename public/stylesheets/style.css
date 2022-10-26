@@ -1,3 +1,8 @@
+html {
+  color: black;
+  background-color: white;
+  font-family: "Roboto Mono";
+}
 .brand-logo {
   margin-left: 15px;
 }
@@ -14,9 +19,16 @@
   position: relative;
   top: -5px;
 }
-html {
-  background-color: aqua;
-}
 .nav-wrapper {
-  display: inline-block;
+  color: black;
+  background-color: white;
+}
+nav ul a {
+  color: black;
+}
+.nav {
+  color: black;
+}
+.borderless {
+  box-shadow: none;
 }
