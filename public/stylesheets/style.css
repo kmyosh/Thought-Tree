@@ -14,3 +14,9 @@
   position: relative;
   top: -5px;
 }
+html {
+  background-color: aqua;
+}
+.nav-wrapper {
+  display: inline-block;
+}
