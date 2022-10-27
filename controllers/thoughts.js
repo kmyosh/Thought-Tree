@@ -4,7 +4,6 @@ module.exports = {
   index,
   newThought,
   create,
-  show,
 
   // addFact,
   // delFact,
@@ -14,6 +13,7 @@ function index(req, res, next) {
   console.log(req.query);
   res.render("thoughts/index", { user: req.user });
 }
+// do i need a show function here?
 function newThought(req, res) {
   res.render("thoughts/new", { title: "New Thought" });
 }
