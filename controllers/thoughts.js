@@ -1,4 +1,3 @@
-
 const Thought = require("../models/thoughts");
 module.exports = {
   index,
@@ -10,12 +9,13 @@ module.exports = {
 };
 
 function index(req, res, next) {
-  console.log(req.query);
+  console.log("index");
   res.render("thoughts/index", { user: req.user });
 }
 // do i need a show function here?
 function newThought(req, res) {
-  res.render("thoughts/new", { title: "New Thought" });
+  console.log("new thought");
+  res.render("thoughts/new", { title: "New Thought", user: req.user });
 }
 function create(req, res) {
   const thought = new Thought(req.body);

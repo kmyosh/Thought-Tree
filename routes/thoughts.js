@@ -1,6 +1,7 @@
 var router = require("express").Router();
 var thoughtsCtrl = require("../controllers/thoughts");
 
+
 // GET /students
 router.get("/", thoughtsCtrl.index);
 router.get("/new", thoughtsCtrl.newThought);

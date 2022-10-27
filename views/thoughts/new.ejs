@@ -4,7 +4,7 @@
 <form action="/thoughts" method="POST">
   <!-- how do I include a timestamp/date? -->
   <!-- how do I include a username? -->
-  <label> <%-req.session.passport.user %></label>
+  <label> <%-user.name%></label>
   <label>Thought: <input type="text" name="thought" /> </label><br />
   <input type="submit" value="post" />
 </form>
