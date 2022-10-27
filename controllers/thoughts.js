@@ -15,18 +15,13 @@ function index(req, res, next) {
   res.render("thoughts/index", { user: req.user });
 }
 function newThought(req, res) {
-  res.render("thoughts/new");
+  res.render("thoughts/new", { title: "New Thought" });
 }
 function create(req, res) {
-  // convert nowShowing's checkbox of nothing or "on" to boolean
-  req.body.nowShowing = !!req.body.nowShowing;
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
-  const movie = new Movie(req.body);
-  movie.save(function(err) {
-    if (err) return res.redirect('/movies/new');
+  const thought = new Thought(req.body);
+  thought.save(function (err) {
+    if (err) return res.redirect("/thoughts/new");
     // res.redirect('/movies');
-    res.redirect(`/movies/${movie._id}`);
+    res.redirect("/thoughts");
   });
 }
