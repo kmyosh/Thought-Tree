@@ -1,4 +1,4 @@
-const Thinker = require("../models/thinkers");
+
 const Thought = require("../models/thoughts");
 module.exports = {
   index,

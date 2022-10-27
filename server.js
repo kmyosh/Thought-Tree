@@ -19,7 +19,6 @@ require("./config/passport");
 const indexRoutes = require("./routes/index");
 const thoughtsRoutes = require("./routes/thoughts");
 const thinkersRoutes = require("./routes/thinkers");
-const newRoutes = require("./routes/new");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -47,7 +46,6 @@ app.use(passport.session());
 app.use("/", indexRoutes);
 app.use("/thoughts", thoughtsRoutes);
 app.use("/thinkers", thinkersRoutes);
-app.use("/new", newRoutes);
 
 // invalid request, send 404 page
 app.use(function (req, res) {

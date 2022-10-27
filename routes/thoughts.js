@@ -1,11 +1,10 @@
-var router = require('express').Router();
-var thoughtsCtrl = require('../controllers/thoughts');
+var router = require("express").Router();
+var thoughtsCtrl = require("../controllers/thoughts");
 
 // GET /students
-router.get('/', thoughtsCtrl.index);
-router.get('new',thoughtsCtrl.newThought);
-router.get('/:id',thoughtsCtrl.show)
-router.post('/',thoughtsCtrl.create)
+router.get("/", thoughtsCtrl.index);
+router.get("new", thoughtsCtrl.newThought);
+router.post("/", thoughtsCtrl.create);
 // POST /facts
 // We will already have access to the logged in student on
 // the server, therefore do not use: /students/:id/facts
