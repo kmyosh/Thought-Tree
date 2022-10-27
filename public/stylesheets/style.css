@@ -28,6 +28,10 @@ html {
 nav ul a {
   color: black;
 }
+nav ul a:hover {
+  color: black;
+  text-decoration: underline;
+}
 .title {
   color: black;
   padding-left: 25px;
@@ -36,6 +40,7 @@ nav ul a {
 #subtitle {
   margin: 0;
   padding-right: 60px;
+  opacity: 50%;
 }
 .card-content {
   background-color: transparent;
@@ -50,4 +55,25 @@ nav ul a {
   font-size: 11px;
   color: (0, 0, 0, 0.5);
   padding-left: 25px;
+}
+.thought-form {
+  display: inline-block;
+  width: 500px;
+  justify-content: left;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+.form-title {
+  padding-left: 50px;
+  font-size: 18px;
+  position: relative;
+  top: 50px;
+}
+.form-button {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
 }

@@ -1,10 +1,12 @@
 <%- include('../partials/header.ejs') %>
+
 <!-- input form will go here. -->
-<h5 class="title">What's on your mind?</h5>
-<form action="/thoughts" method="POST">
+<h5 class="form-title">What's on your mind?</h5>
+<form class="thought-form" action="/thoughts" method="POST">
   <!-- how do I include a timestamp/date? -->
   <label> <%=user.name%>'s</label>
   <label>thought: <input type="text" name="thought" /> </label><br />
-  <input type="submit" value="post" />
+  <input class="form-button" type="submit" value="submit" />
 </form>
+
 <%- include('../partials/footer') %>
