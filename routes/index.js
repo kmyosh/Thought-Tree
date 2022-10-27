@@ -31,5 +31,8 @@ router.get("/logout", function (req, res, next) {
   });
   res.redirect("/thoughts");
 });
-
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) return next();
+  res.redirect('/auth/google');
+}
 module.exports = router;

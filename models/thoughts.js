@@ -2,11 +2,10 @@ const mongoose = require("mongoose");
 
 const thoughtSchema = new mongoose.Schema(
   {
-    thought: [{ body: String, date: Date }],
-    // facts: [factSchema]
+    thought: String,
   },
   {
-    // timestamps: true,
+    timestamps: true,
   }
 );
 
