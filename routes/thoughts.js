@@ -3,7 +3,9 @@ var thoughtsCtrl = require('../controllers/thoughts');
 
 // GET /students
 router.get('/', thoughtsCtrl.index);
-
+router.get('new',thoughtsCtrl.newThought);
+router.post('/',thoughtsCtrl.create)
+router.get('/:')
 // POST /facts
 // We will already have access to the logged in student on
 // the server, therefore do not use: /students/:id/facts
