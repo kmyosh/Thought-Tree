@@ -6,7 +6,7 @@ const thoughtSchema = new mongoose.Schema(
     // facts: [factSchema]
   },
   {
-    timestamps: true,
+    // timestamps: true,
   }
 );
 

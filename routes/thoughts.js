@@ -3,7 +3,7 @@ var thoughtsCtrl = require("../controllers/thoughts");
 
 // GET /students
 router.get("/", thoughtsCtrl.index);
-router.get("new", thoughtsCtrl.newThought);
+router.get("/new", thoughtsCtrl.newThought);
 router.post("/", thoughtsCtrl.create);
 // POST /facts
 // We will already have access to the logged in student on
