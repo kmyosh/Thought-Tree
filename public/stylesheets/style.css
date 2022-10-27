@@ -37,3 +37,17 @@ nav ul a {
   margin: 0;
   padding-right: 60px;
 }
+.card-content {
+  background-color: transparent;
+  color: black;
+  font-size: 24px;
+}
+.thoughts {
+  font-size: 16px;
+  padding-left: 25px;
+}
+.timestamp {
+  font-size: 11px;
+  color: (0, 0, 0, 0.5);
+  padding-left: 25px;
+}

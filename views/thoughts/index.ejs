@@ -1,3 +1,21 @@
 <%- include('../partials/header.ejs') %>
+<div class="card-container">
+  <% thoughts.forEach(function(t){ %>
+  <div class="card z-depth-0">
+    <div class="card-content">
+      <div>
+        <span class="card-title">
+          <span class="thoughts">
+            <%= t.thought %>
+            <br />
+            <span class="timestamp"> <%= t.createdAt %> </span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
 <!-- list of thoughts display here -->
 <%- include('../partials/footer.ejs') %>
