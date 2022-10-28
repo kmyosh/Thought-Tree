@@ -94,3 +94,6 @@ input {
 .select-button:hover {
   cursor: pointer;
 }
+span.thoughts-text:hover {
+  text-decoration: underline;
+}

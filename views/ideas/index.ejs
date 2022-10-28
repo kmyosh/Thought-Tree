@@ -1,6 +1,6 @@
 <%- include('../partials/header.ejs') %>
 <div class="card-container">
-  <% thoughts.forEach(function(t){ %>
+  <% ideas.forEach(function(i){ %>
   <div class="card z-depth-0">
     <div class="card-content">
       <div>
@@ -11,7 +11,6 @@
             <span class="thoughts"> "<%= t.thought %>" </span>
             <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
-            <input type="checkbox" name="select" /><%t.select %>
           </span>
         </span>
       </div>

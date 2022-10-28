@@ -8,7 +8,7 @@
           <span class="thoughts">
             <label class="username"> <%=user.name%>'s</label>
             <br />
-            <span class="thoughts"> "<%= t.thought %>" </span>
+            <span class="thoughts-text"> "<%= t.thought %>" </span>
             <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
           </span>
@@ -18,5 +18,6 @@
   </div>
   <% }) %> <% } %>
 </div>
-<%-include('views/thoughts/index.ejs');%>
+
 <%-include('../partials/footer.ejs');%>
+
