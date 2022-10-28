@@ -2,10 +2,10 @@
 
 <!-- input form will go here. -->
 <h5 class="form-title">What's your next idea?</h5>
-<form class="thought-form" action="/ideas" method="POST">
+<form class="thought-form" action="/ideas/<%=thought.id%>" method="POST">
   <!-- how do I include a timestamp/date? -->
   <label> <%=user.name%>'s</label>
-  <p><%=id%></p>
+  <!-- <p><%=id%></p> -->
   <label>idea: <input type="text" name="idea" autocomplete="off" /> </label
   ><br />
   <input class="form-button" type="submit" value="submit" />

@@ -3,7 +3,7 @@ var ideasCtrl = require("../controllers/ideas");
 
 router.get("/saadsays", isLoggedIn, ideasCtrl.newIdea);
 router.get("/", ideasCtrl.index);
-router.post("/", ideasCtrl.create);
+router.post("/:id", ideasCtrl.create);
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

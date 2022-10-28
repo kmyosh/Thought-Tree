@@ -13,12 +13,9 @@ function index(req, res, next) {
   //   });
 }
 function newIdea(req, res) {
-  // console.log("user", req.user);
-
-  // console.log("thought", req.query.thoughtId);
   const thoughtId = req.query.thoughtId;
 
- Thought.find({}, (err, thoughts) => {
+  Thought.find({}, (err, thoughts) => {
     let thought;
     if (err) return err.message;
 
@@ -28,8 +25,8 @@ function newIdea(req, res) {
       if (t._id == thoughtId) {
         thought = t;
       }
+      console.log(thought);
     });
-
     res.render("./ideas/new", {
       thought,
       title: "New Idea",
@@ -41,12 +38,14 @@ function newIdea(req, res) {
 function create(req, res) {
   console.log("creating idea");
   console.log(req.params.id);
-  // const idea = new Idea(req.body);
-  // console.log(idea);
-  // Thought.findOne();
-  // idea.save(function (err) {});
-  // if (err) console.log(err.message);
-  return res.redirect("/thoughts");
-  // });
+  Thought.findById(req.params.id, function (err, thought) {
+    if (err) return res.send(err.message);
+    thought.idea.push(req.body);
+    thought.save;
+    thought.save(function (err) {
+      if (err) return res.send(err.message);
+      return res.redirect("/thoughts");
+      // console.log(thought);
+    });
+  });
 }
-// above create function might not work.

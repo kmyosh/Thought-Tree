@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const ideaSchema = new mongoose.Schema(
   {
-    name: String,
     idea: String,
   },
   {

@@ -12,8 +12,16 @@
             <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
             <a href="/ideas/saadsays?thoughtId=<%=t._id%>">New Idea</a>
-
-            <div class="idea"><%=t.idea %></div>
+            <div class="idea">
+              <ul>
+                <%t.idea.forEach(i => { %>
+                <li><%=i.idea %></li>
+            
+                <% }) %>
+              </ul>
+            </div>
+          <div class="idea">
+            </div>
           </span>
         </span>
         <div class="idea-form">
@@ -21,7 +29,7 @@
           <form class="thought-form" action="/thoughts" method="POST">
             <label> <%=user.name%>'s</label>
             <label
-              >idea:
+              
               <input type="text" name="idea" autocomplete="off" /> </label
             ><br />
             <input type="hidden" name="_id" value="<%=t._id%>" />
