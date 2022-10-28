@@ -11,6 +11,7 @@ module.exports = {
 function index(req, res, next) {
   console.log(req.user);
   console.log("index");
+
   Thought.find().then((thoughts) => {
     res.render("thoughts/index", { user: req.user, thoughts });
   });

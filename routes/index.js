@@ -3,9 +3,8 @@ var passport = require("passport");
 
 // The root route renders our only view
 router.get("/", function (req, res) {
-  res.render("thoughts/index", { user: req.user });
+  res.redirect("/thoughts");
 });
-
 // Google OAuth login route
 router.get(
   "/auth/google",
