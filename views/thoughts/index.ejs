@@ -6,9 +6,10 @@
       <div>
         <span class="card-title">
           <span class="thoughts">
-            "<%= t.thought %>"
+            <label class="username"> <%=user.name%>'s</label>
             <br />
-            <span class="name"> <%= t.createdBy %> </span>
+            <span class="thoughts"> "<%= t.thought %>" </span>
+            <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
           </span>
         </span>

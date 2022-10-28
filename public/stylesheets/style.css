@@ -76,6 +76,7 @@ nav ul a:hover {
   color: white;
   border-radius: 10px;
   width: 100px;
+  height: 30px;
 }
 input {
   font-family: "Roboto Mono";
