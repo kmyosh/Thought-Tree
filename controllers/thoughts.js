@@ -12,8 +12,8 @@ function index(req, res, next) {
   console.log(req.user);
   console.log("index");
 
-  Thought.find().then((result) => {
-    res.render("thoughts/index", { user: req.user, thoughts: result });
+  Thought.find().then((thoughts) => {
+    res.render("thoughts/index", { user: req.user, thoughts });
   });
 }
 // do i need a show function here?
@@ -23,7 +23,6 @@ function newThought(req, res) {
   res.render("thoughts/new", {
     title: "New Thought",
     user: req.user,
-    thoughts: result,
   });
 }
 function create(req, res) {
