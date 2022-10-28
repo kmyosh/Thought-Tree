@@ -5,7 +5,6 @@ const ideaSchema = new mongoose.Schema(
   {
     name: String,
     idea: String,
-
   },
   {
     timestamps: true,
@@ -15,13 +14,11 @@ const ideaSchema = new mongoose.Schema(
 const thoughtSchema = new mongoose.Schema(
   {
     thought: String,
-    select: Boolean,
-    idea:[ideaSchema],
+    idea: [ideaSchema],
   },
   {
     timestamps: true,
   }
 );
-
 
 module.exports = mongoose.model("Thought", thoughtSchema);
