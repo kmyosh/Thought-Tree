@@ -12,15 +12,11 @@
             <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
           </span>
-          <form method="POST">
-            <button></button>
-          </form>
         </span>
       </div>
     </div>
   </div>
   <% }) %> <% } %>
 </div>
-
-<!-- list of thoughts display here -->
-<%- include('../partials/footer.ejs') %>
+<%-include('views/thoughts/index.ejs');%>
+<%-include('../partials/footer.ejs');%>
