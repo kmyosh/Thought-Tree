@@ -4,18 +4,14 @@
 
 ---
 
-## To Play
+## Screenshots
 
-Test your fortune here:
+<img src = 'images/Screen Shot 2022-10-28 at 6.08.19 AM.png'>
 
-## Instructions
-
-<img src = 'Images/Screenshots/Screen Shot 2022-10-11 at 9.27.23 AM.png'>
-
-<img src = 'Images/Screenshots/Screen Shot 2022-10-11 at 9.26.58 AM.png'>
-
+<img src = 'images/Screen Shot 2022-10-28 at 6.09.01 AM.png'>
 
 ## Technologies
+
 - Node
 - Express
 - MongoDB
@@ -24,13 +20,13 @@ Test your fortune here:
 - HTML
 - CSS
 
-
 ## Getting Started
+
 <a href="http://localhost:3000/thoughts">
 
-### Next Steps*
+### Next Steps\*
 
 - Responsive display, would be nice to have a mobile-friendly app.
 - display username, timestamps for ideas.
-- have other users be able to connect your 'thoughts' into 'ideas'. Essentially, you connect multiple "thoughts" into one "idea" that can 
-become a catalyst for creativity. 
+- have other users be able to connect your 'thoughts' into 'ideas'. Essentially, you connect multiple "thoughts" into one "idea" that can
+  become a catalyst for creativity.
