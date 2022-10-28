@@ -20,9 +20,9 @@ function create(req, res) {
   const idea = new Idea(req.body);
   console.log(idea);
   idea.save(function (err) {
-    if (err) return res.redirect("/ideas/new");
-    // res.redirect('/movies');
-    res.redirect("/ideas");
+    if (err) console.log(err.message);
+
+    return res.redirect("/thoughts");
   });
 }
 // above create function might not work.

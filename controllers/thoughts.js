@@ -9,12 +9,16 @@ module.exports = {
 };
 
 function index(req, res, next) {
-  console.log(req.user);
-  console.log("index");
+  // console.log(req.user);
+  // console.log("index");
 
-  Thought.find().then((thoughts) => {
-    res.render("thoughts/index", { user: req.user, thoughts });
-  });
+  Thought.find({},function(err,thoughts){
+    // thoughts.forEach(t =>{
+    //   console.log(t.idea);
+    // }) 
+// console.log(thoughts);
+res.render("thoughts/index", { user: req.user, thoughts });
+  })
 }
 // do i need a show function here?
 function newThought(req, res) {

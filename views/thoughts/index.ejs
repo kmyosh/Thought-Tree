@@ -11,12 +11,14 @@
             <span class="thoughts-text"> "<%= t.thought %>" </span>
             <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
+            <div class="thoughts-array">
+              <div class="idea"><%=t.idea %></div>
+            </div>
           </span>
         </span>
         <div class="idea-form">
           <h5 class="form-title">What's your next idea?</h5>
           <form class="thought-form" action="/ideas" method="POST">
-            <!-- how do I include a timestamp/date? -->
             <label> <%=user.name%>'s</label>
             <label
               >idea:

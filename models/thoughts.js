@@ -1,20 +1,22 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const thoughtSchema = new mongoose.Schema(
+const ideaSchema = new mongoose.Schema(
   {
-    thought: String,
-    select: Boolean,
+    name: String,
+    idea: String,
+
   },
   {
     timestamps: true,
   }
 );
-const ideaSchema = new mongoose.Schema(
+
+const thoughtSchema = new mongoose.Schema(
   {
-    name: String,
-    idea: String,
-    thoughts: [thoughtSchema],
+    thought: String,
+    select: Boolean,
+    idea:[ideaSchema],
   },
   {
     timestamps: true,
