@@ -8,34 +8,20 @@
           <span class="thoughts">
             <label class="username"> <%=user.name%>'s</label>
             <br />
-            <span class="thoughts-text"> "<%= t.thought %>" </span>
+            <span class="thoughts-text"> "<%= t.thought %>..." </span>
             <br />
             <span class="timestamp"> <%= t.createdAt %> </span>
             <a href="/ideas/saadsays?thoughtId=<%=t._id%>">New Idea</a>
             <div class="idea">
               <ul>
                 <%t.idea.forEach(i => { %>
-                <li><%=i.idea %></li>
-            
+                <li>...<%=i.idea %></li>
                 <% }) %>
               </ul>
             </div>
-          <div class="idea">
-            </div>
           </span>
         </span>
-        <div class="idea-form">
-          <h5 class="form-title">What's your next idea?</h5>
-          <form class="thought-form" action="/thoughts" method="POST">
-            <label> <%=user.name%>'s</label>
-            <label
-              
-              <input type="text" name="idea" autocomplete="off" /> </label
-            ><br />
-            <input type="hidden" name="_id" value="<%=t._id%>" />
-            <input class="form-button" type="submit" value="submit" />
-          </form>
-        </div>
+        <div class="idea-form"></div>
       </div>
     </div>
   </div>
